@@ -46,9 +46,10 @@
 	\bigskip
 
 	\textbf{Goal of the workshop:} \pause
-	\begin{enumerate}
-	\item to give enough intro that you can start writing your papers in LaTeX
-	\end{enumerate}
+	\begin{itemize}
+	    \item to give enough intro that you can start writing your papers in LaTeX
+	\end{itemize}
+	
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -98,8 +99,23 @@
 
 \begin{frame}
 \frametitle{Bottomline}
-LaTeX won't make you more productive or your paper any better. Absolutely no one will be impressed by your text editor/markup language of choice. Writing in LaTeX is purely a personal, subjective choice.\pause
+LaTeX won't make you more productive or your paper any better. Absolutely no one will be impressed by your text editor or language of choice. Writing in LaTeX is purely a personal, subjective choice.
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}
+\frametitle{Survival essentials}
+Absolutely essential survival tricks:
+\begin{itemize}
+    \item ALWAYS have at least two (2) backups of your work (one physical copy, one cloud backup). This is the bare minimum. Best is to have a (1) dedicated backup SSD and (2) your work computer HDD/SSD from which the (3) cloud syncs. (You can use whatever service you wish, like Google Drive, Dropbox, OneDrive, but use one!) \pause
+    \item ALWAYS use a bibliography manager! At this point there are no excuses not to use one of these: Zotero, Mandaley, Endnote. 
+\end{itemize}
+\end{frame}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,15 +124,15 @@ LaTeX won't make you more productive or your paper any better. Absolutely no one
 \begin{frame}
 \frametitle{Getting started}
 What you need installed on Windows:
-\begin{enumerate}
+\begin{itemize}
 \item MiKTeX  (\url{https://miktex.org/about})
 \item Tex Live (\url{https://tug.org/texlive/})
-\end{enumerate}
+\end{itemize}
 
 On Mac OS X:
-\begin{enumerate}
+\begin{itemize}
 	\item Mac TeX (\url{http://tug.org/mactex})
-\end{enumerate}
+\end{itemize}
 
 \bigskip
 Online option: \url{https://www.overleaf.com} account where you can do all of this online like a google doc.
@@ -173,10 +189,11 @@ Or use a general purpose text editor with a LaTeX add-on:
 \centering
 \begin{minted}[linenos, fontsize=\tiny]{latex}
 % everything in this line is a comment and won't be in the final document
-% the packages and other formatting commands before the \begin{document} is called the PREAMBULUM
+% the packages and other formatting commands before the \begin{document} is 
+% called the PREAMBULUM
 
-\documentclass[11pt]{article}   % setting the document class to 'article' with 11pt characters
-\usepackage[utf8]{inputenc}     % using the 'inputenc' package
+\documentclass[11pt]{article}  % setting the document class to 'article' with 11pt characters
+\usepackage[utf8]{inputenc}    % using the 'inputenc' package
 
 \title{perg\_workshop}          % setting the title of the document
 \author{Akos m}                 % Setting the author
@@ -210,34 +227,33 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 \frametitle{Basic formatting - input}
 \begin{figure}
 \centering
-	\begin{minted}[linenos, fontsize=\tiny]{latex}
+\begin{minted}[linenos, fontsize=\tiny]{latex}
 
-	This text is \textit{italicized, while} this one is \textbf{bold.}
-	You can \underline{underline text as well}, or combine \textbf{\textit{bold and italics.}}
-	% the syntax for formatting is \textbf{text}.
-	% To combine them, you can do a nested formatting, like  \textbf{\textit{text}}
+This text is \textit{italicized, while} this one is \textbf{bold.}
+You can \underline{underline text as well}, or combine \textbf{\textit{bold and italics.}}
+% the syntax for formatting is \textbf{text}.
+% To combine them, you can do a nested formatting, like  \textbf{\textit{text}}
 
-	\medskip % adds horizontal space. other such commands are:
-	% \smallskip
-	% \bigskip
+\medskip % adds horizontal space. other such commands are:
+% \smallskip
+% \bigskip
 
-	\begin{enumerate}
-	\item Numbered lists
-	\item Are cool
-		\begin{itemize}
-			\item and you can do nested
-			\item unordered lists too.
-		\end{itemize}
-	\end{enumerate}
+\begin{enumerate}
+    \item Numbered lists
+    \item Are cool
+        \begin{itemize}
+            \item and you can do nested
+            \item unordered lists too.
+        \end{itemize}
+\end{enumerate}
 
-		\end{minted}
+
+\end{minted}
 \end{figure}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 
 \begin{frame}
 \frametitle{Basic formatting - output}
@@ -254,39 +270,44 @@ This text is \textit{italicized,} while this one is \textbf{bold.} You can \unde
 		\item unordered lists too.
 	\end{itemize}
 \end{enumerate}
+
+
 \end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{frame}[fragile]{}
-\frametitle{Paragraph formatting and adding figures - input}
+\frametitle{Paragraph formatting - input}
 \begin{figure}
-	\begin{minted}[linenos, fontsize=\tiny]{latex}
-	\begin{center}  % everything inside this environment is centered
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat.
-	\end{center}
+\centering
+\begin{minted}[linenos, fontsize=\tiny]{latex}
+
+ \begin{center}  % everything inside this environment is centered
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.
+\end{center}
     
     % indented paragraph
-	\par Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. \\ % adds a linebreak
+\par Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. \\ % adds a linebreak
 
-	\noindent % new paragraph without indenting
-	Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-	mollit anim id est laborum.
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua.
-	\end{minted}
+\noindent % new paragraph without indenting
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+
+
+\end{minted}
 \end{figure}
-
 \end{frame}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -324,28 +345,31 @@ tempor incididunt ut labore et dolore magna aliqua.
 \frametitle{adding figures and tables - input}
 	\begin{minted}[linenos, fontsize=\tiny, breaklines=true]{latex}
 
-	% the [h!] parameter tells the figure environment that you want this fig. _here_
-	\begin{figure}[h!]
-		\includegraphics[scale=0.5]{figures/ceu_picture.jpg} 	% the [scale=0.5] parameter will scale the image
-		\caption{A picture of CEU}
-		\label{fig:ceu}
-	\end{figure}
+% the [h!] parameter tells the figure environment that you want this fig. _here_
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{figures/ceu_picture.jpg} % the [scale=0.5] parameter will scale the image
+\caption{A picture of CEU}
+\label{fig:ceu}
+\end{figure}
 
 
-	% tables are non intuitive. Proof:
+% tables are non intuitive. Proof:
 	
 
-	\begin{center}
-		\begin{tabular}{ |c|c|c| } 
-		\hline
-		cell1 & cell2 & cell3 \\ 
-		cell4 & cell5 & cell6 \\ 
-		cell7 & cell8 & cell9 \\ 
-		\hline
-		\end{tabular}
-	\end{center}
-	
-	
+\begin{table}[]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    cell1 & cell2 & cell3 \\ 
+    \hline
+    cell4 & cell5 & cell6 \\ 
+    cell7 & cell8 & cell9 \\ 
+    \hline
+    \end{tabular}
+    \caption{My dummy table}
+    \label{tab:my_label}
+\end{table}
+
 
 	\end{minted}
 
@@ -356,10 +380,10 @@ tempor incididunt ut labore et dolore magna aliqua.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
-\frametitle{Adding figures and tables - output} \pause
+\frametitle{Adding figures and tables - output}
 	
 \begin{figure}[h!]
-	\includegraphics[scale=0.5]{figures/ceu_picture.jpg} 	% the [scale=0.5] parameter will scale the image
+	\includegraphics[scale=0.25]{figures/ceu_picture.jpg} 	% the [scale=0.5] parameter will scale the image
 	\caption{A picture of CEU}
 	\label{fig:ceu}
 \end{figure}
@@ -367,16 +391,20 @@ tempor incididunt ut labore et dolore magna aliqua.
 
 \bigskip
 
-
-\begin{center}
-	\begin{tabular}{ |c|c|c| } 
-	\hline
-	cell1 & cell2 & cell3 \\ 
+\begin{table}[]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    cell1 & cell2 & cell3 \\ 
+    \hline
 	cell4 & cell5 & cell6 \\ 
 	cell7 & cell8 & cell9 \\ 
 	\hline
-	\end{tabular}
-\end{center}
+    \end{tabular}
+    \caption{My dummy table}
+    \label{tab:my_label}
+\end{table}
+
 
 \end{frame}
 
@@ -388,7 +416,7 @@ tempor incididunt ut labore et dolore magna aliqua.
 
 
 \begin{frame}
-\frametitle{Many many tools to get nicely formatted LaTeX tables} \pause
+\frametitle{Many, many tools to get nicely formatted LaTeX tables}
  
 	\begin{itemize}
 		\item \url{https://en.wikibooks.org/wiki/LaTeX/Tables#Using_spreadsheets_and_data_analysis_tools}
@@ -397,7 +425,7 @@ tempor incididunt ut labore et dolore magna aliqua.
 \smallskip
 
 	\begin{figure}[h!]
-		\includegraphics[scale=0.4]{tables.png}
+		\includegraphics[scale=0.4]{figures/tables.png}
 	\end{figure}
 
 \end{frame}
@@ -409,7 +437,7 @@ tempor incididunt ut labore et dolore magna aliqua.
 
 \begin{frame}
 \frametitle{For everything else}
-There are StackOverflow and Overleaf tutorials.
+There are StackOverflow and Overleaf tutorials and Google.
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -417,7 +445,7 @@ There are StackOverflow and Overleaf tutorials.
 
 \begin{frame}[t]\frametitle{Adding references with natbib}
     \begin{enumerate}
-        \item Have \texttt{\usepackage[round]{natbib}} in your preambulum.
+        \item Have \textbf{usepackage[round]{natbib}} in your preambulum.
         \item You can choose the type of citation you prefer in the [param] space
         \item you add the bibliography to your document with a bibliography\{your\_bibfile\}
     \end{enumerate}
@@ -462,7 +490,7 @@ There are StackOverflow and Overleaf tutorials.
 \begin{frame}
 \frametitle{setting up your dissertation in LaTeX}
 \begin{itemize}
-\item A main .tex file that contains the link to the chapters, preambulum, title page, acnowledgement, etc.
+\item A main .tex file that contains the link to the chapters, preambulum, title page, acknowledgement, etc.
 \item Each chapter is a separate .tex file
 \item The .bib file with your references
 \item Whatever figures and tables you want to include
@@ -477,7 +505,7 @@ There are StackOverflow and Overleaf tutorials.
 \begin{frame}
 
 \centering
-\includegraphics[scale=0.4]{figures/dissertation_files.png}
+\includegraphics[scale=0.6]{figures/dissertation_files.png}
 
 \end{frame}
 
@@ -496,7 +524,7 @@ e.g.: don't worry about the order to run pdflatex and bibtex to get your final d
 
 
 \begin{frame}
-\frametitle{The workflow with the CEU template} \pause
+\frametitle{The workflow with the CEU template} 
 \begin{itemize}
 	\item Have all your packages and extra formatting options in the preambulum in your main .tex \pause
 	\item Decide on the citation package you want to use (I recommend either 'natbib' or 'biblatex') \pause
@@ -511,13 +539,14 @@ e.g.: don't worry about the order to run pdflatex and bibtex to get your final d
 
 \begin{frame}
 \frametitle{Using LaTeX for CVs, or presentations}
-	You can find plenty of great LaTeX CV templates on Overleaf which you can modify after.
-	\medskip
-	The "beamer" class creates the presentation format (such as this one)
-	\medskip
-	If you want to draw great looking flowcharts or other graphics, you can use the \texttt{tikz} package
-	\medskip
-	All of the previous disclaimer applies to these as well: only do it if you enjoy it, or absolutely must.
+
+\begin{itemize}
+    \item You can find plenty of great LaTeX CV templates on Overleaf which you can modify after.
+    \item The "beamer" class creates the presentation format (such as this one)
+    \item If you want to draw great looking flowcharts or other graphics, you can use the \texttt{tikz} package
+    \item 	All of the previous disclaimer applies to these as well: only do it if you enjoy it, or absolutely must.
+\end{itemize}
+
 \end{frame}
 
 
