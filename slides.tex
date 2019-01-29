@@ -9,15 +9,20 @@
 
 
 %Information to be included in the title page:
-\title{Write your dissertation/prospectus in LaTeX}
+\title{Introduction to writing in LaTeX}
 \author{Akos Mate}
-\institute{CEU - PERG Workshop}
-\date{2018}
+\institute{Central European University}
+\date{2019 January}
 
 
 \begin{document}
 
 \frame{\titlepage}
+
+\section{Introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
 	\frametitle{Overview}
@@ -25,12 +30,15 @@
 		\item What is (La)Tex and why use it?
 		\item Goal of the workshop
 		\item Very short first steps to get set up
-		\item CEU LaTeX template
 		\item Using citation manager and LaTeX together
+		\item CEU LaTeX template
 		\item some other things that might be useful
 	\end{enumerate}
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
 \frametitle{What is LaTeX?}
@@ -39,11 +47,12 @@
 
 	\textbf{Goal of the workshop:} \pause
 	\begin{enumerate}
-	\item to NOT teach LaTeX! \pause
 	\item to give enough intro that you can start writing your papers in LaTeX
 	\end{enumerate}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
 	\frametitle{Why use LaTeX?}
@@ -66,6 +75,9 @@
 \end{frame}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}
 	\frametitle{Of course there's research on this}
 	"We show that LaTeX users were \textbf{slower} than Word users, \textbf{wrote less} text in the same amount of time, and produced more typesetting, orthographical, grammatical, and formatting errors.
@@ -78,38 +90,85 @@
 \bigskip
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 \begin{frame}
 \frametitle{Bottomline}
 LaTeX won't make you more productive or your paper any better. Absolutely no one will be impressed by your text editor/markup language of choice. Writing in LaTeX is purely a personal, subjective choice.\pause
 \end{frame}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}
 \frametitle{Getting started}
-What you need installed:
+What you need installed on Windows:
 \begin{enumerate}
-\item MiKTeX distribution (\url{https://miktex.org/about})
-\item Text editor of your choice (TeXstudio is great: \url{https://www.texstudio.org/}) \pause
+\item MiKTeX  (\url{https://miktex.org/about})
+\item Tex Live (\url{https://tug.org/texlive/})
 \end{enumerate}
+
+On Mac OS X:
+\begin{enumerate}
+	\item Mac TeX (\url{http://tug.org/mactex})
+\end{enumerate}
+
 \bigskip
-Or get a \url{https://www.sharelatex.com} account where you can do all of this online like a google doc.
-\medskip
-For bonus hipster points, other general purpose text editors you can use: Sublime Text, Atom, Notepad++, Emacs, Vim
+Online option: \url{https://www.overleaf.com} account where you can do all of this online like a google doc.
+
+I would recommend Overleaf for starters because it makes things easier.
 \end{frame}
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Getting started}
+Actual writing is done in a text editor of your choice. Dedicated TeX editors are (non exhaustive list):
+
+\begin{itemize}
+		\item TeXmaker
+		\item TeXstudio
+		\item TeXworks
+\end{itemize}
+
+Or use a general purpose text editor with a LaTeX add-on:
+
+\begin{itemize}
+	\item Visual Studio Code
+	\item Sublime Text
+	\item Atom
+	\item emacs
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
 \frametitle{Useful resources}
 \begin{itemize}
 \item CEU dissertation template: \url{http://www.personal.ceu.hu/tex/thesis/}
-\item \url{https://www.sharelatex.com/learn/} - tutorial everything that you'll need (most likely)
+\item \url{https://www.overleaf.com/learn/} - tutorial everything that you'll need (most likely)
 \item Google (seriously) and \url{https://tex.stackexchange.com/}
-\item \textbf{SUPER USEFUL!} - Templates for CVs, papers, cover letters, etc: \url{https://www.sharelatex.com/templates}
+\item \textbf{SUPER USEFUL!} - Templates for CVs, papers, cover letters, etc: \url{https://www.overleaf.com/latex/templates}
 \end{itemize}
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}[fragile]{}
-\frametitle{Minimum Working Example}
+\frametitle{Example document}
 \begin{figure}
 \centering
 \begin{minted}[linenos, fontsize=\tiny]{latex}
@@ -143,6 +202,9 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 \end{figure}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{frame}[fragile]{}
 \frametitle{Basic formatting - input}
@@ -172,6 +234,10 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 \end{figure}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \begin{frame}
 \frametitle{Basic formatting - output}
@@ -191,6 +257,8 @@ This text is \textit{italicized,} while this one is \textbf{bold.} You can \unde
 \end{frame}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{frame}[fragile]{}
@@ -221,6 +289,10 @@ This text is \textit{italicized,} while this one is \textbf{bold.} You can \unde
 \end{frame}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{frame}
 \frametitle{Paragraph formatting and adding figures - output}
 
@@ -244,56 +316,79 @@ tempor incididunt ut labore et dolore magna aliqua.
 \end{frame}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{frame}[fragile]{}
 \frametitle{adding figures and tables - input}
 	\begin{minted}[linenos, fontsize=\tiny, breaklines=true]{latex}
 
 	% the [h!] parameter tells the figure environment that you want this fig. _here_
 	\begin{figure}[h!]
-	\includegraphics[scale=0.5]{ceu_picture.jpg} % the [scale=0.5] parameter will scale the image
-	\caption{A picture of CEU}
-	\label{fig:ceu}
+		\includegraphics[scale=0.5]{figures/ceu_picture.jpg} 	% the [scale=0.5] parameter will scale the image
+		\caption{A picture of CEU}
+		\label{fig:ceu}
 	\end{figure}
-	\bigskip
 
-	% tables are hard. Proof:
 
-	\begin{table}
-    \centering
-    %\rowcolors{5}{}{gray!10}
-    \begin{tabular}{*4c}
-        \toprule
-        & \multicolumn{3}{c}{methods tested} \\
-        \cmidrule(lr){2-4}
-        Case & Heat  & Exhaust & Outdoor \\
-        \#   & Wheel & Air     & Air     \\
-        \midrule
-        1 &        & NA &        \\
-        2 &        &        & NA \\
-        3 &        & NA & NA \\
-        4 & NA &        &        \\
-        5 & NA & NA &        \\
-        6 & NA &        & NA \\
-        7 & NA & NA & NA \\
-        \bottomrule
-    \end{tabular}
-    \caption{\tiny MWE of a table using booktabs \\ Source: https://tex.stackexchange.com/questions/238503/tip-on-how-to-make-a-visually-good-table}
-    \label{tab:booktabs}
-    \end{table}
+	% tables are non intuitive. Proof:
+	
+
+	\begin{center}
+		\begin{tabular}{ |c|c|c| } 
+		\hline
+		cell1 & cell2 & cell3 \\ 
+		cell4 & cell5 & cell6 \\ 
+		cell7 & cell8 & cell9 \\ 
+		\hline
+		\end{tabular}
+	\end{center}
+	
+	
+
 	\end{minted}
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Due to the limits of Beamer and my patience, cue} \pause
-	the mwe.tex (for some reason that I could not figure out, Beamer acts funny with the previous slide's table and paragraph formatting) \\ \pause
-	\\
-	\textbf{MWE: Minimal Working Example}: \\
-	for a reason and guide to creating MWEs see here: https://tex.meta.stackexchange.com/a/3225
-\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
-\frametitle{LaTeX is not a hammer and building tables is not a nail} \pause
+\frametitle{Adding figures and tables - output} \pause
+	
+\begin{figure}[h!]
+	\includegraphics[scale=0.5]{figures/ceu_picture.jpg} 	% the [scale=0.5] parameter will scale the image
+	\caption{A picture of CEU}
+	\label{fig:ceu}
+\end{figure}
+
+
+\bigskip
+
+
+\begin{center}
+	\begin{tabular}{ |c|c|c| } 
+	\hline
+	cell1 & cell2 & cell3 \\ 
+	cell4 & cell5 & cell6 \\ 
+	cell7 & cell8 & cell9 \\ 
+	\hline
+	\end{tabular}
+\end{center}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}
+\frametitle{Many many tools to get nicely formatted LaTeX tables} \pause
  
 	\begin{itemize}
 		\item \url{https://en.wikibooks.org/wiki/LaTeX/Tables#Using_spreadsheets_and_data_analysis_tools}
@@ -307,42 +402,18 @@ tempor incididunt ut labore et dolore magna aliqua.
 
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{frame}
 \frametitle{For everything else}
-There are StackOverflow and Sharelatex tutorials.
+There are StackOverflow and Overleaf tutorials.
 \end{frame}
 
-
-\begin{frame}
-\frametitle{setting up your dissertation in LaTeX}
-\begin{itemize}
-\item A main .tex file that contains the link to the chapters, preambulum, title page, acnowledgement, etc.
-\item Each chapter is a separate .tex file
-\item The .bib file with your references
-\item Whatever figures or pictures you want to include
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\centering
-\includegraphics[scale=0.4]{dissertation_files.png}
-
-\end{frame}
-
-\begin{frame}
-Some of the advice is outdated in the CEU template if you use ShareLatex or TeXstudio or other contemporary editor:
-e.g.: don't worry about the order to run pdflatex and bibtex to get your final document, the software does it for you.
-\end{frame}
-
-\begin{frame}
-\frametitle{The workflow with the CEU template} \pause
-\begin{itemize}
-	\item Have all your packages and extra formatting options in the preambulum in your main .tex \pause
-	\item Decide on the citation package you want to use (I recommend either 'natbib' or 'biblatex') \pause
-	\item Use your citation manager of choice (Zotero, Endnote, Mandaley, etc.) to collect your references and then export it to your .bib file \pause
-	\item Finish your dissertation and graduate
-\end{itemize}
-\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[t]\frametitle{Adding references with natbib}
     \begin{enumerate}
@@ -352,6 +423,8 @@ e.g.: don't worry about the order to run pdflatex and bibtex to get your final d
     \end{enumerate}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{frame}[t]\frametitle{How it looks like with Zotero}
@@ -362,6 +435,9 @@ e.g.: don't worry about the order to run pdflatex and bibtex to get your final d
 	\item Save it into the same folder as your main .tex 
 	\end{enumerate}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{frame}[t]\frametitle{How to cite with natbib}
@@ -377,9 +453,65 @@ e.g.: don't worry about the order to run pdflatex and bibtex to get your final d
 	\end{itemize}
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}
+\frametitle{setting up your dissertation in LaTeX}
+\begin{itemize}
+\item A main .tex file that contains the link to the chapters, preambulum, title page, acnowledgement, etc.
+\item Each chapter is a separate .tex file
+\item The .bib file with your references
+\item Whatever figures and tables you want to include
+\end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+
+\centering
+\includegraphics[scale=0.4]{figures/dissertation_files.png}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+Some of the advice is outdated in the CEU template if you use Overleaf or TeXstudio or other contemporary editor:
+e.g.: don't worry about the order to run pdflatex and bibtex to get your final document, the software does it for you.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\frametitle{The workflow with the CEU template} \pause
+\begin{itemize}
+	\item Have all your packages and extra formatting options in the preambulum in your main .tex \pause
+	\item Decide on the citation package you want to use (I recommend either 'natbib' or 'biblatex') \pause
+	\item Use your citation manager of choice (Zotero, Endnote, Mandaley, etc.) to collect your references and then export it to your .bib file \pause
+	\item Finish your dissertation and graduate
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{frame}
 \frametitle{Using LaTeX for CVs, or presentations}
-	You can find plenty of great LaTeX CV templates on ShareLatex which you can modify after.
+	You can find plenty of great LaTeX CV templates on Overleaf which you can modify after.
 	\medskip
 	The "beamer" class creates the presentation format (such as this one)
 	\medskip
@@ -388,14 +520,9 @@ e.g.: don't worry about the order to run pdflatex and bibtex to get your final d
 	All of the previous disclaimer applies to these as well: only do it if you enjoy it, or absolutely must.
 \end{frame}
 
-\begin{frame}[t]\frametitle{Some good examples}
-    Some good examples of what LaTeX can do for your dissertation you can check out some that looks great (no judgment on the content):
-    \begin{itemize}
-    	\item \href{https://goo.gl/4sa1rc}{Bastian Becker's}
-    	\item \href{https://goo.gl/7FuJfp}{Zbigniew Truchlewski's}
-    \end{itemize}
 
-\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \end{document}
